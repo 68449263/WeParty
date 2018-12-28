@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "572823236544",
+    "firebase_url": "https://weparty-418fc.firebaseio.com",
+    "project_id": "weparty-418fc",
+    "storage_bucket": "weparty-418fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572823236544:android:7f8c1d6f9f6f36c4",
+        "android_client_info": {
+          "package_name": "za.co.we_party.weparty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572823236544-514rskga4ruqgkgggafht0gjfhfi0oi8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "za.co.we_party.weparty",
+            "certificate_hash": "b3afba5fe63ceeb7f96e3f2c75a62b9c05dbf7d1"
+          }
+        },
+        {
+          "client_id": "572823236544-t4j7pbdk3dkeopj01bqnc1l3lepbvmor.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpkEBOGTXem7egVBdnbKT9W8GadhTJxs0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572823236544-t4j7pbdk3dkeopj01bqnc1l3lepbvmor.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

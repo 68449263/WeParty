@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet"
+    style="@android:style/TextAppearance.DeviceDefault.Medium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/darkblue"
+    android:orientation="vertical"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="180dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/darkblue"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                android:layout_weight="1"
+
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:background="@drawable/purple_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Live" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                android:layout_weight="1"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:background="@drawable/orange_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Events" />
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="0dp"
+                android:layout_weight="1"
+                app:cardPreventCornerOverlap="true">
+
+                <TextView
+                    android:background="@drawable/cyan_gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:text="Trending" />
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/RouteDetailsBottomSheetCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="1dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/verticaldarkgradient"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/resultsLocationStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Nearby"
+                        android:textColor="#fff"
+                        android:textSize="18sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="60dp"
+                    android:layout_height="2.5dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/gradientbackground" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/nearbyRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/darkblue" />
+
+        </android.support.v7.widget.CardView>
+
+
+        <!-- Empty list satelite img -->
+        <LinearLayout
+            android:id="@+id/view_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <TextView
+                style="@style/AppTheme.Body1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="@string/message_no_results"
+                android:textColor="@color/darkblue" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
